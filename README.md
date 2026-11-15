@@ -61,7 +61,7 @@ Accepted domains: coding, general, cybersecurity_defensive, research, mathematic
 
 8. Evaluate the adapter:
 
-       python src/evaluation/evaluate.py --config configs/train.yaml --adapter outputs/infinity-ai-7b
+       python src/evaluation/evaluate.py --config configs/train.yaml --adapter outputs/infinity-ai-7b/adapter
 
 9. Start the text API after the adapter exists:
 
