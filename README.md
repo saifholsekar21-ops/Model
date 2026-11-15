@@ -63,6 +63,13 @@ Accepted domains: coding, general, cybersecurity_defensive, research, mathematic
 
        python src/evaluation/evaluate.py --config configs/train.yaml --adapter outputs/infinity-ai-7b
 
+9. Start the text API after the adapter exists:
+
+       export INFINITY_ADAPTER_PATH=outputs/infinity-ai-7b/adapter
+       uvicorn src.deployment.api:app --host 0.0.0.0 --port 8000
+
+   This initial API is text-only and GPU-dependent. Do not expose an unauthenticated public endpoint; use a trusted authenticated gateway or private tunnel.
+
 The model weights and datasets are intentionally excluded from Git. Save checkpoints to Kaggle working storage and export only the adapter to a controlled Hugging Face repository or private storage.
 
 ## Quality gates
